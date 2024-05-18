@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Learn Regular Expressions by Building a Spam Filter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body onload="showPopup()">
+    <header class="main-text">
+      <h1 class="title">Is this Spam?</h1>
+      <p class="description">
+        Enter a phrase to check if it would be marked as spam or not.
+      </p>
+    </header>
+
+    <main>
+      <label class="message-label" for="message-input">Message: </label>
+      <textarea
+        placeholder="Enter message here"
+        value=""
+        type="text"
+        name="message"
+        id="message-input"
+        rows="10"
+        cols="40"
+      ></textarea>
+      <button class="btn" id="check-message-btn" type="button">
+        Check message
+      </button>
+      <p id="result"></p>
+    </main>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 class="popup-title">Spam Filter Description</h2>
+        <p class="popup-description">
+          The spam filter checks messages for patterns commonly found in spam,
+          such as requests for help, promises of money, stock alerts, and
+          generic greetings. If a message matches any of these patterns, it's
+          flagged as spam.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">&copy; made by Mohammed Nainia</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
